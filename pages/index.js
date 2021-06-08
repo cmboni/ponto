@@ -1,12 +1,13 @@
-import Link from 'next/link'
+import Link from "next/link";
+import { Container } from "@material-ui/core";
 
 export default function IndexPage() {
   return (
-    <div>
-      Hello World.{' '}
-      <Link href="/about">
+    <Container>
+      Hello World.{" "}
+      <Link href="/about" passHref>
         <a>About</a>
       </Link>
-    </div>
-  )
+    </Container>
+  );
 }
