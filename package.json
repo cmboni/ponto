@@ -10,9 +10,11 @@
   "dependencies": {
     "@material-ui/core": "4.11.4",
     "@material-ui/icons": "4.11.2",
+    "firebase": "8.6.5",
     "next": "latest",
     "react": "^16.13.1",
-    "react-dom": "^16.13.1"
+    "react-dom": "^16.13.1",
+    "react-firebaseui": "5.0.2"
   },
   "license": "MIT",
   "keywords": [
