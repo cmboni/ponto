@@ -16,8 +16,18 @@ const uiConfig = {
 
 function SignInScreen() {
   return (
-    <Grid container>
-      <StyledFirebaseAuth uiConfig={uiConfig} firebaseAuth={firebase.auth()} />
+    <Grid
+      container
+      justify="center"
+      alignItems="center"
+      style={{ height: "100vh", overflow: "hidden" }}
+    >
+      <Grid item>
+        <StyledFirebaseAuth
+          uiConfig={uiConfig}
+          firebaseAuth={firebase.auth()}
+        />
+      </Grid>
     </Grid>
   );
 }
