@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react";
 import Head from "next/head";
-import { CssBaseline, ThemeProvider } from "@material-ui/core";
+import { CssBaseline, Grid, ThemeProvider } from "@material-ui/core";
 import theme from "../src/theme";
 import firebase from "../src/firebase";
+import SignInScreen from "../components/login";
 
 export default function App({ Component, pageProps }) {
   useEffect(() => {
@@ -17,7 +18,7 @@ export default function App({ Component, pageProps }) {
 
   firebase.auth().onAuthStateChanged(setUser);
 
-  return user ? (
+  return (
     <>
       <Head>
         <title>Ponto</title>
@@ -28,10 +29,8 @@ export default function App({ Component, pageProps }) {
       </Head>
       <ThemeProvider theme={theme}>
         <CssBaseline />
-        <Component {...pageProps} />
+        {user ? <Component {...pageProps} /> : <SignInScreen />}
       </ThemeProvider>
     </>
-  ) : (
-    <>LOGAR</>
   );
 }

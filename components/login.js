@@ -1,3 +1,4 @@
+import { Grid } from "@material-ui/core";
 import StyledFirebaseAuth from "react-firebaseui/StyledFirebaseAuth";
 import firebase from "../src/firebase";
 
@@ -15,11 +16,9 @@ const uiConfig = {
 
 function SignInScreen() {
   return (
-    <div>
-      <h1>My App</h1>
-      <p>Please sign-in:</p>
+    <Grid container>
       <StyledFirebaseAuth uiConfig={uiConfig} firebaseAuth={firebase.auth()} />
-    </div>
+    </Grid>
   );
 }
 
