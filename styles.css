@@ -2,3 +2,6 @@
   box-shadow: none !important;
   background-color: transparent !important;
 }
+.firebaseui-card-content {
+  padding: 0 !important;
+}

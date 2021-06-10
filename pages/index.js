@@ -5,7 +5,8 @@ import {
   Toolbar,
   Typography
 } from "@material-ui/core";
-import { Menu } from "@material-ui/icons";
+import { ExitToApp, Menu } from "@material-ui/icons";
+import firebase from "../src/firebase";
 
 export default function IndexPage() {
   return (
@@ -17,6 +18,15 @@ export default function IndexPage() {
               <Menu />
             </IconButton>
             <Typography variant="h6">Ponto</Typography>
+            <IconButton
+              style={{ marginLeft: "auto" }}
+              aria-label="logout"
+              edge="end"
+              color="inherit"
+              onClick={(event) => firebase.auth().signOut()}
+            >
+              <ExitToApp />
+            </IconButton>
           </Toolbar>
         </Container>
       </AppBar>
