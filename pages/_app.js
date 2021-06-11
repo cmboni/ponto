@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import Head from "next/head";
-import { CssBaseline, Grid, ThemeProvider } from "@material-ui/core";
+import { CssBaseline, Grid, ThemeProvider, Container } from "@material-ui/core";
 import theme from "../src/theme";
 import firebase from "../src/firebase";
 import SignInScreen from "../components/SignInScreen";
@@ -33,17 +33,19 @@ export default function App({ Component, pageProps }) {
         {user ? (
           <Component {...pageProps} />
         ) : (
-          <Grid
-            container
-            spacing={3}
-            justify="center"
-            alignItems="center"
-            style={{ height: "100vh", overflow: "hidden" }}
-          >
-            <Grid item>
-              <SignInScreen />
+          <Container maxWidth="sm">
+            <Grid
+              container
+              spacing={3}
+              justify="center"
+              alignItems="center"
+              style={{ height: "100vh", overflow: "hidden" }}
+            >
+              <Grid item>
+                <SignInScreen />
+              </Grid>
             </Grid>
-          </Grid>
+          </Container>
         )}
       </ThemeProvider>
     </>
