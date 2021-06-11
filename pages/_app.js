@@ -33,7 +33,7 @@ export default function App({ Component, pageProps }) {
         {user ? (
           <Component {...pageProps} />
         ) : (
-          <Container maxWidth="sm">
+          <Container>
             <Grid
               container
               spacing={3}
